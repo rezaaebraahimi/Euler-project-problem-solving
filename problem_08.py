@@ -15,4 +15,7 @@ for n in range(0,len(NUMBER) - 39):
         num *= int(j)
     if num > greatest:
         greatest = num    
+        
 print(greatest)  
+
+    ### Answer is 23514624000 ###
