@@ -22,5 +22,5 @@ for n in range(1,int(num/2)+1):
         num = num/n
         if prime(num):
             print(num)
-        
+
     ### Answer is 6857 ###
