@@ -1,6 +1,18 @@
 # Problem Solving
 - In this repository i try to **solve** a series of **computational problems** with **Python**.
-+ I try to do this in **my own way**, but you can solve the problems with **your own point of view**.
++ I try to do this in **my own way**, but you can solve the problems with **your own point of view**. <br>
+<p>
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---1">Problem-001</a> 
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---2">Problem-002</a>
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---3">Problem-003</a> 
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---4">Problem-004</a> 
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---5">Problem-005</a> <br>
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---6">Problem-006</a> 
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---7">Problem-007</a> 
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---8">Problem-008</a>
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---9">Problem-009</a> 
+- <a href="https://github.com/rezaaebraahimi/problem-solving#problem---10">Problem-010</a></p>
+
 <br><br>
 # Problem - 1
 > <h4>If we list all the natural numbers below 10 that are multiples of 3 or 5,<br>
