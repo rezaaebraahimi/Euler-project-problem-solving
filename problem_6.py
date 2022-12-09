@@ -27,9 +27,3 @@ def sq_of_sum():
 print (sq_of_sum() - sum_of_sq())
 
     ### Answer is 25164150 ###
-
-
-
-
-
-
