@@ -17,7 +17,10 @@
 # Problem - 1
 > <h4>If we list all the natural numbers below 10 that are multiples of 3 or 5,<br>
 > we get 3, 5, 6 and 9. The sum of these multiples is 23.<br><br>
-> Find the sum of all the multiples of 3 or 5 below 1000. </h4>
+> Find the sum of all the multiples of 3 or 5 below 1000.<br></h4>
+> <h6> اگر اعداد طبیعی زیر 10 که بر 3 یا 5 بخش پذیر هستند را لیست کنیم<br>
+> اعداد 3، 5، 6 و 9 بدست میاد، مجموع این اعداد 23 است<br><br>
+> مجموع اعداد زیر 1000 که به 3 یا 5 بخش پذیر هستند را پیدا کنید</h6>
 
 ```python
 num_ls=[]
@@ -40,7 +43,11 @@ print(sum)
 > 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... <br><br>
 > By considering the terms in the Fibonacci sequence whose values do not exceed four million,<br>
 > find the sum of the even-valued terms.</h4>
-
+> <h6>هر مقدار جدید در دنباله فیبوناچی از جمع دو عدد قبلی ساخته میشه <br>
+> با شروع از 1 و 2، 10 عدد اول به این صورت خواهد بود <br><br>
+> 1، 2، 3، 5، 8، 13، 21، 34، 55، 89<br><br>
+> با در نظر گرفتن عبارت هایی در دنباله فیبوناچی که مقادیر آنها از 4 میلیون تجاوز نمی کند <br>
+> مجموع اعداد زوج میان این اعداد را بدست بیاورید</h6>
 ```python
 first_num = 1
 second_num = 1
@@ -61,6 +68,8 @@ print(sum)
 # Problem - 3 
 > <h4>The prime factors of 13195 are 5, 7, 13 and 29.<br><br>
 > What is the largest prime factor of the number 600851475143? </h4>
+> <h6> ضرایب اول عدد 13195 عبارتند از 5، 7، 13 و 29 <br><br>
+> بزرگترین ضریب اول عدد 600851475143 چیست؟ </h6>
 ```python
 num = 600851475143
 
@@ -88,7 +97,9 @@ for n in range(1,int(num/2)+1):
 > <h4> A palindromic number reads the same both ways.<br>
 > The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 * 99.<br><br>
 > Find the largest palindrome made from the product of two 3-digit numbers. </h4>
-
+> <h6> یک عدد پالیندرومیک از هر دو طرف یکسان خوانده میشود <br>
+>  بزرگترین پالیندورم ساخته شده از حاصل ضرب دو عدد 2 رقمی عدد 91 * 99 = 9009 است <br><br>
+> بزرگترین پالیندورمی که از ضرب دو عدد 3 رقمی ساخته میشود را پیدا کنید </h6>
 ```python
 num_ls = []
 
@@ -105,6 +116,8 @@ print(max(num_ls))
 # Problem - 5
 > <h4> 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.<br><br>
 > What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?</h4>
+> <h6>2520 کوچکترین عددی است که می توان بر هر یک از اعداد از 1 تا 10 بدون هیچ باقیمانده ای تقسیم کرد. <br><br>
+> کوچکترین عدد مثبتی که بر همه اعداد 1 تا 20 بخش پذیر است کدام است؟ </h6>
 
 ```python
 num = 1
@@ -129,6 +142,13 @@ print(num)
 > Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is: <br>
 > 3025 - 385 = 2640 <br><br>
 > Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum. </h4>
+> <h6> مجموع مربع های ده عدد طبیعی اول برابر است با <br>
+> 1**2 + 2**2 + ... + 10**2 = 385 <br><br>
+> مربع مجموع ده عدد طبیعی اول برابر است با <br>
+> (1+2+3+...+10)**2 = 55**2 = 3025 <br><br>
+> بنابراین تفاضل مجموع مربع های ده عدد طبیعی اول و مربع مجموع آن برابر است با <br>
+> 3025 - 385 = 2640 <br><br>
+> تفاضل مجموع مربع های صد عدد طبیعی اول و مربع مجموع را پیدا کنید. </h6>
 
 ```python
 def sum_of_sq():
@@ -156,7 +176,9 @@ print (sq_of_sum() - sum_of_sq())
 > 2, 3, 5, 7, 11, and 13, <br>
 > we can see that the 6th prime is 13.<br><br>
 > What is the 10001st prime number? </h4>
-
+> <h6>با لیست کردن 6 عدداول : 2، 3، 5، 7، 11 و 13   <br>
+> میتونیم ببینیم که ششمین عدد اول 6 است<br><br>
+> حالا 10001مین عدد اول کدام است؟ </h6>
 ```python
 def prime(x):
     for n in range(2, int(x / 2) + 1):
@@ -184,7 +206,9 @@ print(primes[-1])
 > NUMBER = 7316717653133............0420752963450 <br><br>
 > Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.<br>
 > What is the value of this product? </h4>
-
+> <h6> چهار رقم مجاور در عدد 1000 رقمی زیر که بیشترین حاصلضرب را دارند 9 * 9 * 8 * 9 = 5832 هستند  <br>
+> سیزده رقم مجاور را در عدد 1000 رقمی پیدا کنید که بیشترین حاصل ضرب را دارند. <br><br>
+> مقدار حاصلضرب آنها چقدر است؟ </h6>
 ```python
 NUMBER = """7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450"""
 
@@ -202,12 +226,15 @@ print(greatest)
 ```
 
 # Problem - 9
-> <h4> A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,<br>
-> a**2 + b**2 = c**2 <br>
+> <h4> A Pythagorean triplet is a set of three natural numbers, a < b < c,<br>
+>  for which, a**2 + b**2 = c**2 <br>
 > For example, 32 + 42 = 9 + 16 = 25 = 5**2.<br><br>
 > There exists exactly one Pythagorean triplet for which a + b + c = 1000.<br>
 > Find the product abc. </h4>
-
+> <h6> سه گانه فیثاغورثی مجموعه ای از سه عدد طبیعی است <br>
+> به عنوان مثال: a**2 + b**2 = c**2 <br>
+> دقیقاً یک سه گانه فیثاغورثی وجود دارد که به این صورت a + b + c = 1000 است  <br><br>
+> حاصلضرب a , b , c را پیدا کنید </h6>
 ```python
 for a in range(1, 1000+1):
     for b in range(a + 1, 1000+1):
@@ -221,7 +248,8 @@ for a in range(1, 1000+1):
 # Problem - 10
 > <h4> The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17. <br><br>
 > Find the sum of all the primes below two million. </h4>
-
+> <h6>مجموع اعداد اول زیر 10 برابر است با 2 + 3 + 5 + 7 = 17 <br><br>
+> مجموع همه اعداد اول زیر 2 میلیون را پیدا کنید. </h6>
 ```python
 def prime(x):
     for n in range(2, int(x / 2) + 1):
