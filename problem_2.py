@@ -14,7 +14,7 @@ second_num = 1
 new_fib = first_num + second_num
 sum = 0 
 
-while new_fib < 4*10**6:
+while new_fib < 4 * 10 ** 6:
     sum += new_fib
     first_num = second_num + new_fib
     second_num = new_fib + first_num

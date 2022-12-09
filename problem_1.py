@@ -10,7 +10,7 @@ num_ls=[]
 sum = 0
 
 for n in range(1000):
-    if n % 3==0 or n % 5 == 0:
+    if n % 3 == 0 or n % 5 == 0:
         num_ls.append(n)
         
 for num in num_ls:

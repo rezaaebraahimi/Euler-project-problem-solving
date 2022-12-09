@@ -8,7 +8,7 @@ num = 600851475143
 
 def prime(x):
     if x > 1:
-        for n in range(2, int(x/2)+1):
+        for n in range(2, int(x / 2) + 1):
             if (x % n) == 0:
                 return False
         else:
