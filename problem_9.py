@@ -14,4 +14,4 @@ for a in range(1, 1000+1):
         if a*a + b*b == c*c:
             print(a*b*c)
             
-            ### Answer is 3187500 ###
+            ### Answer is 31875000 ###
