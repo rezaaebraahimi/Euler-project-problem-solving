@@ -1,6 +1,8 @@
 # Problem Solving
-- In this repository i try to **solve** a series of **computational problems** with **Python**.
-+ I try to do this in **my own way**, but you can solve the problems with **your own point of view**. <br>
+- In this repository, I tried to solve a series of **computational problems** using **Python**.
++ I try to do this in **my own way**, but you can solve the problems according to **your own point of view**. <br>
++ در این ریپازیتوری، سعی کردم یه سری از مسائل محاسباتی رو با استفاده از پایتون حل کنم
++  تلاش کردم تا اینکارو به روش خودم انجام بدم، همچنین شما هم میتونید با توجه به دیدگاه خودتون به حل مسائل بپردازید
 <p>
 - <a href="https://github.com/rezaaebraahimi/problem-solving#problem---1">Problem-001</a> 
 - <a href="https://github.com/rezaaebraahimi/problem-solving#problem---2">Problem-002</a>
