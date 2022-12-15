@@ -21,6 +21,7 @@ def answer():
             sum += n
     return sum
 
+
 print(answer())
 
     ### Answer is 142913828922 ###
