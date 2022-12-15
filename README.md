@@ -27,12 +27,10 @@
 
 ```python
 def answer():
-    num_ls=[]
     sum = 0
     
     for n in range(1000):
         if n % 3 == 0 or n % 5 == 0:
-            num_ls.append(n)
             sum += n
     return sum
 
@@ -167,20 +165,20 @@ print(answer())
 
 ```python
 def sum_of_sq():
-    sum_sq = []
     sum = 0
     for n in range (1, 101):
-        sum_sq.append(n**2)
-    for num in sum_sq:
-        sum += num
+        sum_sq = n**2
+        sum += sum_sq
     return sum
+   
     
 def sq_of_sum():
     sum_2 = 0
     for x in range (1, 101):
         sum_2 += x
-    sq = sum_2**2
+        sq = sum_2**2
     return sq
+
 
 print (sq_of_sum() - sum_of_sq())
 
