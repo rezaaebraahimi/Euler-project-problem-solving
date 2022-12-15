@@ -5,15 +5,18 @@ What is the smallest positive number that is evenly divisible by all of the numb
 """
 
 
-num = 1
+def answer():
+    num = 1
+    
+    for n in range(1, 21):
+        if num % n != 0:
+            for x in range(1, 21):
+                if (x * num) % n == 0:
+                    num = num * x
+                    break
+    return num
 
-for n in range(1, 21):
-    if num % n != 0:
-        for x in range(1, 21):
-            if (x * num) % n == 0:
-                num = num * x
-                break
             
-print(num)
+print(answer())
 
     ### Answer is 232792560 ###

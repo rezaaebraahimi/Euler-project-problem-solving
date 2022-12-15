@@ -9,17 +9,20 @@ find the sum of the even-valued terms.
 """
 
 
-first_num = 1
-second_num = 1
-new_fib = first_num + second_num
-sum = 0 
-
-while new_fib < 4 * 10 ** 6:
-    sum += new_fib
-    first_num = second_num + new_fib
-    second_num = new_fib + first_num
+def answer():
+    first_num = 1
+    second_num = 1
     new_fib = first_num + second_num
+    sum = 0 
+
+    while new_fib < 4 * 10 ** 6:
+        sum += new_fib
+        first_num = second_num + new_fib
+        second_num = new_fib + first_num
+        new_fib = first_num + second_num
+    return sum
+ 
     
-print(sum)
+print(answer())
 
     ### Answer is 4613732 ###

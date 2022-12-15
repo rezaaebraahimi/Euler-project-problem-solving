@@ -26,17 +26,19 @@
 > مجموع اعداد زیر 1000 که به 3 یا 5 بخش پذیر هستند را پیدا کنید</h6>
 
 ```python
-num_ls=[]
-sum = 0
+def answer():
+    num_ls=[]
+    sum = 0
+    
+    for n in range(1000):
+        if n % 3 == 0 or n % 5 == 0:
+            num_ls.append(n)
+            sum += n
+    return sum
 
-for n in range(1000):
-    if n % 3 == 0 or n % 5 == 0:
-        num_ls.append(n)   
-        
-for num in num_ls:
-    sum += num
-print(sum)
 
+print(answer())
+    
     ### Answer is 233168 ###
 ```
 
@@ -52,18 +54,21 @@ print(sum)
 > با در نظر گرفتن عبارت هایی در دنباله فیبوناچی که مقادیر آنها از 4 میلیون تجاوز نمی کند <br>
 > مجموع اعداد زوج میان این اعداد را بدست بیاورید</h6>
 ```python
-first_num = 1
-second_num = 1
-new_fib = first_num + second_num
-sum = 0 
-
-while new_fib < 4 * 10 ** 6:
-    sum += new_fib
-    first_num = second_num + new_fib
-    second_num = new_fib + first_num
+def answer():
+    first_num = 1
+    second_num = 1
     new_fib = first_num + second_num
+    sum = 0 
+
+    while new_fib < 4 * 10 ** 6:
+        sum += new_fib
+        first_num = second_num + new_fib
+        second_num = new_fib + first_num
+        new_fib = first_num + second_num
+    return sum
+ 
     
-print(sum)
+print(answer())
 
     ### Answer is 4613732 ###
 ```
@@ -74,25 +79,26 @@ print(sum)
 > <h6> ضرایب اول عدد 13195 عبارتند از 5، 7، 13 و 29 <br><br>
 > بزرگترین ضریب اول عدد 600851475143 چیست؟ </h6>
 ```python
-num = 600851475143
-
 def prime(x):
-    if x > 1:
         for n in range(2, int(x / 2) + 1):
             if (x % n) == 0:
                 return False
         else:
             return True
-    else:
-       return False
- 
- 
-for n in range(1,int(num/2)+1):
-    if num % n == 0:
-        num = num/n
-        if prime(num):
-            print(num)
 
+
+def answer(): 
+    num = 600851475143
+    
+    for n in range(2,int(num/2)+1):
+        if num % n == 0:
+            num = num/n
+            if prime(num):
+                return num
+
+
+print(answer())
+    
     ### Answer is 6857 ###
 ```
 
@@ -104,16 +110,19 @@ for n in range(1,int(num/2)+1):
 >  بزرگترین پالیندورم ساخته شده از حاصل ضرب دو عدد 2 رقمی عدد 91 * 99 = 9009 است <br><br>
 > بزرگترین پالیندورمی که از ضرب دو عدد 3 رقمی ساخته میشود را پیدا کنید </h6>
 ```python
-num_ls = []
-
-for i in range(100, 1000):
-	for j in range(100, 1000):
-		if str(i * j) == str(i * j)[ : :-1]:
-			num_ls.append(i * j)
+def answer():
+	num_ls = []
+ 
+	for i in range(100, 1000):
+		for j in range(100, 1000):
+			if str(i * j) == str(i * j)[ : :-1]:
+				num_ls.append(i * j)
+	return num_ls
+ 
    
-print(max(num_ls))
+print(max(answer()))
 
-	### Answer is 906909 ###
+	### Answer is 906609 ###
 ```
 
 # Problem - 5
@@ -123,16 +132,19 @@ print(max(num_ls))
 > کوچکترین عدد مثبتی که بر همه اعداد 1 تا 20 بخش پذیر است کدام است؟ </h6>
 
 ```python
-num = 1
+def answer():
+    num = 1
+    
+    for n in range(1, 21):
+        if num % n != 0:
+            for x in range(1, 21):
+                if (x * num) % n == 0:
+                    num = num * x
+                    break
+    return num
 
-for n in range(1, 21):
-    if num % n != 0:
-        for x in range(1, 21):
-            if (x * num) % n == 0:
-                num = num * x
-                break
             
-print(num)
+print(answer())
 
     ### Answer is 232792560 ###
 ```
@@ -191,15 +203,18 @@ def prime(x):
         return True
 
 
-primes = []
-num = 2
+def answer():
+    primes = []
+    num = 2
 
-while len(primes) < 10001 :
-    if prime(num):
-        primes.append(num)
-    num += 1
+    while len(primes) < 10001 :
+        if prime(num):
+            primes.append(num)
+        num += 1
+    return primes[-1]
     
-print(primes[-1])
+    
+print(answer())
     
     ### Answer is 104743 ###
 ```
@@ -213,17 +228,20 @@ print(primes[-1])
 > سیزده رقم مجاور را در عدد 1000 رقمی پیدا کنید که بیشترین حاصل ضرب را دارند. <br><br>
 > مقدار حاصلضرب آنها چقدر است؟ </h6>
 ```python
-NUMBER = """7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450"""
-
-greatest = 0
-for n in range(0,len(NUMBER) - 39):
-    num = 1
-    for j in NUMBER[n:n+13]:
-        num *= int(j)
-    if num > greatest:
-        greatest = num    
-        
-print(greatest)  
+def answer():
+    NUMBER = """7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450"""
+    greatest = 0
+    
+    for n in range(0,len(NUMBER) - 39):
+        num = 1
+        for j in NUMBER[n:n+13]:
+            num *= int(j)
+        if num > greatest:
+            greatest = num    
+    return greatest
+ 
+    
+print(answer())  
 
     ### Answer is 23514624000 ###
 ```
@@ -239,13 +257,17 @@ print(greatest)
 > دقیقاً یک سه گانه فیثاغورثی وجود دارد که به این صورت a + b + c = 1000 است  <br><br>
 > حاصلضرب a , b , c را پیدا کنید </h6>
 ```python
-for a in range(1, 1000+1):
-    for b in range(a + 1, 1000+1):
-        c = 1000 - a - b
-        if a*a + b*b == c*c:
-            print(a*b*c)
-            
-            ### Answer is 31875000 ###
+def answer():
+    for a in range(1, 1000+1):
+        for b in range(a + 1, 1000+1):
+            c = 1000 - a - b
+            if a*a + b*b == c*c:
+                return (a*b*c)
+
+
+print(answer())                
+        
+    ### Answer is 31875000 ###
 ```
 
 # Problem - 10
@@ -262,13 +284,16 @@ def prime(x):
         return True
 
 
-sum = 0
+def answer():
+    sum = 0
 
-for n in range (2, 2000000):
-    if prime(n):
-        sum += n
+    for n in range (2, 2000000):
+        if prime(n):
+            sum += n
+    return sum
 
-print(sum)
+
+print(answer())
 
     ### Answer is 142913828922 ###
 ```

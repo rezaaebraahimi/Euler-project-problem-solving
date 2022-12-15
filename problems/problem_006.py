@@ -13,6 +13,7 @@ Find the difference between the sum of the squares of /
 the first one hundred natural numbers and the square of the sum.
 """
 
+
 def sum_of_sq():
     sum_sq = []
     sum = 0
@@ -21,6 +22,7 @@ def sum_of_sq():
     for num in sum_sq:
         sum += num
     return sum
+   
     
 def sq_of_sum():
     sum_2 = 0
@@ -28,6 +30,7 @@ def sq_of_sum():
         sum_2 += x
     sq = sum_2**2
     return sq
+
 
 print (sq_of_sum() - sum_of_sq())
 

@@ -13,13 +13,15 @@ def prime(x):
         return True
 
 
-sum = 0
+def answer():
+    sum = 0
 
-for n in range (2, 2000000):
-    if prime(n):
-        sum += n
+    for n in range (2, 2000000):
+        if prime(n):
+            sum += n
+    return sum
 
-print(sum)
+print(answer())
 
     ### Answer is 142913828922 ###
         
