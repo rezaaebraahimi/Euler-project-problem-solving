@@ -102,6 +102,27 @@ print(answer())
     ### Answer is 4613732 ###
 ```
 
+<h6>Javascript Solution</h6>
+
+```javascript
+function answer() {
+    let firstNum = 1, secondNum = 1, newFib = firstNum + secondNum, sum = 0;
+
+    while (newFib < 4000000) {
+        sum += newFib;
+        firstNum = secondNum + newFib;
+        secondNum = newFib + firstNum;
+        newFib = firstNum + secondNum;
+    }
+    return sum;
+}
+
+
+console.log(answer());
+
+    /* Answer is 4613732 */
+```
+
 # Problem - 3
 
 > <h4>The prime factors of 13195 are 5, 7, 13 and 29.<br><br>
