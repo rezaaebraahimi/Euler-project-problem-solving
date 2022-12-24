@@ -185,6 +185,8 @@ console.log(answer(600851475143));
 >  بزرگترین پالیندورم ساخته شده از حاصل ضرب دو عدد 2 رقمی عدد 91 * 99 = 9009 است <br><br>
 > بزرگترین پالیندورمی که از ضرب دو عدد 3 رقمی ساخته میشود را پیدا کنید </h6>
 
+<h6>Python Solution</h6>
+
 ```python
 def answer():
 	num_ls = []
@@ -199,6 +201,30 @@ def answer():
 print(max(answer()))
 
 	### Answer is 906609 ###
+```
+
+<h6>Javascript Solution</h6>
+
+```javascript
+function answer() {
+    const pln = (n) => n === n.split("").reverse().join("")
+    let max = 0
+    
+    for (let i = 100; i < 1000; i++) {
+        for (let j = 100; j < 1000; j++) {
+            const n = (i * j)
+            if (n > max && pln(n.toString())) {
+                max = n
+            }
+        }
+    }
+    return max;
+}
+
+
+console.log(answer())
+
+    /* Answer is 906609 */
 ```
 
 # Problem - 5
