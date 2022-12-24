@@ -2,7 +2,7 @@
 
 - In this repository, I tried to solve 10 computational problems of **Project euler** using **Python and Javascript**.
 
-+ I try to do this in **my own way**, but you can solve the problems according to **your own point of view**. `<br>`
++ I try to do this in **my own way**, but you can solve the problems according to **your own point of view**. <br>
 + در این ریپازیتوری،سعی کردم تا 10 مسئله محساباتی از پروژه اویلر را با استفاده از پایتون و جاواسکریپت حل کنم
 + تلاش کردم تا اینکارو به روش خودم انجام بدم، همچنین شما هم میتونید با توجه به دیدگاه خودتون به حل مسائل بپردازید
 
