@@ -80,6 +80,8 @@ console.log(answer());
 > با در نظر گرفتن عبارت هایی در دنباله فیبوناچی که مقادیر آنها از 4 میلیون تجاوز نمی کند <br>
 > مجموع اعداد زوج میان این اعداد را بدست بیاورید</h6>
 
+<h6>Python Solution</h6>
+
 ```python
 def answer():
     first_num = 1
@@ -107,6 +109,8 @@ print(answer())
 > <h6> ضرایب اول عدد 13195 عبارتند از 5، 7، 13 و 29 <br><br>
 > بزرگترین ضریب اول عدد 600851475143 چیست؟ </h6>
 
+<h6>Python Solution</h6>
+
 ```python
 def prime(x):
         for n in range(2, int(x / 2) + 1):
@@ -129,6 +133,26 @@ def answer():
 print(answer())
   
     ### Answer is 6857 ###
+```
+
+<h6>Javascript Solution</h6>
+
+```javascript
+function answer(x) {
+    let n;
+    
+    for (n = 2; n < x; n +=1 ) {
+        while (x % n === 0) {
+            x /= n;
+        }
+    }
+    return n;
+}
+
+
+console.log(answer(600851475143));
+
+    /* Answer is 6857 */
 ```
 
 # Problem - 4
