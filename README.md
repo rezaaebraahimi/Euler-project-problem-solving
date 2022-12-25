@@ -1,8 +1,8 @@
-# Problem Solving
+# Problem Solving (Euler Project)
 
 - In this repository, I tried to solve 10 computational problems of **Project euler** using **Python and Javascript**.
 
-+ I try to do this in **my own way**, but you can solve the problems according to **your own point of view**. <br>
++ I try to do this in **my own way**, but you can solve the problems according to **your own point of view**. `<br>`
 + در این ریپازیتوری،سعی کردم تا 10 مسئله محساباتی از پروژه اویلر را با استفاده از پایتون و جاواسکریپت حل کنم
 + تلاش کردم تا اینکارو به روش خودم انجام بدم، همچنین شما هم میتونید با توجه به دیدگاه خودتون به حل مسائل بپردازید
 
@@ -52,7 +52,7 @@ print(answer())
 function answer() {
     let sum = Number("0");
     const range = [...Array(1000).keys()];
-    
+  
     for (let n in range) {
         if (n % 3 === 0 || n % 5 === 0)
             sum = sum + Number(n);
@@ -160,7 +160,7 @@ print(answer())
 ```javascript
 function answer(x) {
     let n;
-    
+  
     for (n = 2; n < x; n +=1 ) {
         while (x % n === 0) {
             x /= n;
@@ -208,7 +208,7 @@ print(max(answer()))
 function answer() {
     const pln = (n) => n === n.split("").reverse().join("")
     let max = 0
-    
+  
     for (let i = 100; i < 1000; i++) {
         for (let j = 100; j < 1000; j++) {
             const n = (i * j)
@@ -247,7 +247,7 @@ def answer():
                     break
     return num
 
-          
+        
 print(answer())
 
     ### Answer is 232792560 ###
@@ -258,7 +258,7 @@ print(answer())
 ```javascript
 function answer() {
     let num = 1;
-    
+  
     for (let n = 1; n < 20; n++) {
         if (num % n !== 0) {
             for (let x = 1; x < 20; x++){
@@ -469,8 +469,8 @@ def answer():
                 return (a*b*c)
 
 
-print(answer())              
-      
+print(answer())            
+    
     ### Answer is 31875000 ###
 ```
 
