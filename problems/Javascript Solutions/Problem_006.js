@@ -16,6 +16,7 @@ the first one hundred natural numbers and the square of the sum.
 
 function sumOfSq() {
     let sum = 0;
+
     for (let n = 1; n < 101; n++) {
         let sumSq = n ** 2;
         sum += sumSq;
@@ -26,12 +27,14 @@ function sumOfSq() {
 
 function sqOfSum() {
     let sum2 = 0;
+    
     for (let x = 1; x < 101; x++) {
         sum2 += x;
         sq = sum2 ** 2;
     }
     return sq;
 }
+
 
 console.log(sqOfSum() - sumOfSq());
 
