@@ -14,7 +14,6 @@ function answer() {
     for (let n in range) {
         if (n % 3 === 0 || n % 5 === 0)
             sum = sum + Number(n);
-            console.log(n);
     }
     return sum
 }

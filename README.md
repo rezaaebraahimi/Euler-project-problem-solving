@@ -234,6 +234,8 @@ console.log(answer())
 > <h6>2520 کوچکترین عددی است که می توان بر هر یک از اعداد از 1 تا 10 بدون هیچ باقیمانده ای تقسیم کرد. <br><br>
 > کوچکترین عدد مثبتی که بر همه اعداد 1 تا 20 بخش پذیر است کدام است؟ </h6>
 
+<h6>Python Solution</h6>
+
 ```python
 def answer():
     num = 1
@@ -252,6 +254,31 @@ print(answer())
     ### Answer is 232792560 ###
 ```
 
+<h6>Javascript Solution</h6>
+
+```javascript
+function answer() {
+    let num = 1;
+    
+    for (let n = 1; n < 20; n++) {
+        if (num % n !== 0) {
+            for (let x = 1; x < 20; x++){
+                if ((x * num) % n === 0) {
+                    num = num * x
+                    break
+                }
+            }
+        }
+    }
+    return num;
+}
+
+
+console.log(answer());
+
+    /* Answer is 232792560 */
+```
+
 # Problem - 6
 
 > <h4> The sum of the squares of the first ten natural numbers is: <br>
@@ -268,6 +295,8 @@ print(answer())
 > بنابراین تفاضل مجموع مربع های ده عدد طبیعی اول و مربع مجموع آن برابر است با <br>
 > 3025 - 385 = 2640 <br><br>
 > تفاضل مجموع مربع های صد عدد طبیعی اول و مربع مجموع را پیدا کنید. </h6>
+
+<h6>Python Solution</h6>
 
 ```python
 def sum_of_sq():
@@ -291,6 +320,33 @@ print (sq_of_sum() - sum_of_sq())
     ### Answer is 25164150 ###
 ```
 
+<h6>Javascript Solution</h6>
+
+```javascript
+function sumOfSq() {
+    let sum = 0;
+    for (let n = 1; n < 101; n++) {
+        let sumSq = n ** 2;
+        sum += sumSq;
+    }
+    return sum;
+}
+
+
+function sqOfSum() {
+    let sum2 = 0;
+    for (let x = 1; x < 101; x++) {
+        sum2 += x;
+        sq = sum2 ** 2;
+    }
+    return sq;
+}
+
+console.log(sqOfSum() - sumOfSq());
+
+    /* Answer is 25164150 */
+```
+
 # Problem - 7
 
 > <h4> By listing the first six prime numbers:  <br>
@@ -300,6 +356,8 @@ print (sq_of_sum() - sum_of_sq())
 > <h6>با لیست کردن 6 عدداول : 2، 3، 5، 7، 11 و 13   <br>
 > میتونیم ببینیم که ششمین عدد اول 6 است<br><br>
 > حالا 10001مین عدد اول کدام است؟ </h6>
+
+<h6>Python Solution</h6>
 
 ```python
 def prime(x):
@@ -324,6 +382,38 @@ def answer():
 print(answer())
   
     ### Answer is 104743 ###
+```
+
+<h6>Javascript Solution</h6>
+
+```javascript
+function prime(x) {
+    for (let n = 2; n < x; n++ ) {
+        if (x % n === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+function answer() {
+    let primes = [];
+    let num = 2;
+
+    while (primes.length < 10001) {
+        if (prime(num)) {
+            primes.push(num);
+        }
+        num += 1;
+    }
+    return primes.slice(-1).pop()
+}
+
+
+console.log(answer());
+
+    /* Answer is 104743 */
 ```
 
 # Problem - 8

@@ -4,7 +4,6 @@ By listing the first six prime numbers:
 we can see that the 6th prime is 13.
 
 What is the 10001st prime number?
-
 """
 
 
