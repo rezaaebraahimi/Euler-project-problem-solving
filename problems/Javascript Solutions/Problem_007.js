@@ -6,7 +6,6 @@ we can see that the 6th prime is 13.
 What is the 10001st prime number?
  */
 
-
 function prime(x) {
     for (let n = 2; n < x; n++ ) {
         if (x % n === 0) {
@@ -16,12 +15,13 @@ function prime(x) {
     return true;
 }
 
+const stNumber = 10001;
 
-function answer() {
+function answer(stNumber) {
     let primes = [];
     let num = 2;
 
-    while (primes.length < 10001) {
+    while (primes.length < stNumber) {
         if (prime(num)) {
             primes.push(num);
         }
@@ -30,7 +30,6 @@ function answer() {
     return primes.slice(-1).pop()
 }
 
-
-console.log(answer());
+console.log(answer(stNumber));
 
     /* Answer is 104743 */

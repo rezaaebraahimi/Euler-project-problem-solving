@@ -5,23 +5,21 @@ The largest palindrome made from the product of two 2-digit numbers is 9009 = 91
 Find the largest palindrome made from the product of two 3-digit numbers.
 */
 
-
-function answer() {
+function answer(min, max) {
     const pln = (n) => n === n.split("").reverse().join("")
-    let max = 0
+    let largest = 0
     
-    for (let i = 100; i < 1000; i++) {
-        for (let j = 100; j < 1000; j++) {
+    for (let i = min; i < max; i++) {
+        for (let j = min; j < max; j++) {
             const n = (i * j)
-            if (n > max && pln(n.toString())) {
-                max = n
+            if (n > largest && pln(n.toString())) {
+                largest = n
             }
         }
     }
-    return max;
+    return largest;
 }
 
-
-console.log(answer())
+console.log(answer(100, 1000));
 
     /* Answer is 906609 */

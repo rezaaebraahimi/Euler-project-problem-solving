@@ -49,10 +49,10 @@ print(answer())
 <h6>Javascript Solution</h6>
 
 ```javascript
-function answer() {
+const range = [...Array(1000).keys()];
+
+function answer(range) {
     let sum = Number("0");
-    const range = [...Array(1000).keys()];
-  
     for (let n in range) {
         if (n % 3 === 0 || n % 5 === 0)
             sum = sum + Number(n);
@@ -60,8 +60,7 @@ function answer() {
     return sum
 }
 
-
-console.log(answer());
+console.log(answer(range));
 
     /* Answer is 233168 */
 ```
@@ -104,9 +103,7 @@ print(answer())
 <h6>Javascript Solution</h6>
 
 ```javascript
-function answer() {
-    let firstNum = 1, secondNum = 1, newFib = firstNum + secondNum, sum = 0;
-
+function answer(firstNum, secondNum, newFib, sum) {
     while (newFib < 4000000) {
         sum += newFib;
         firstNum = secondNum + newFib;
@@ -116,8 +113,7 @@ function answer() {
     return sum;
 }
 
-
-console.log(answer());
+console.log(answer(1,1,2, 0));
 
     /* Answer is 4613732 */
 ```
@@ -160,7 +156,6 @@ print(answer())
 ```javascript
 function answer(x) {
     let n;
-  
     for (n = 2; n < x; n +=1 ) {
         while (x % n === 0) {
             x /= n;
@@ -168,7 +163,6 @@ function answer(x) {
     }
     return n;
 }
-
 
 console.log(answer(600851475143));
 
@@ -205,23 +199,22 @@ print(max(answer()))
 <h6>Javascript Solution</h6>
 
 ```javascript
-function answer() {
+function answer(min, max) {
     const pln = (n) => n === n.split("").reverse().join("")
-    let max = 0
-  
-    for (let i = 100; i < 1000; i++) {
-        for (let j = 100; j < 1000; j++) {
+    let largest = 0
+    
+    for (let i = min; i < max; i++) {
+        for (let j = min; j < max; j++) {
             const n = (i * j)
-            if (n > max && pln(n.toString())) {
-                max = n
+            if (n > largest && pln(n.toString())) {
+                largest = n
             }
         }
     }
-    return max;
+    return largest;
 }
 
-
-console.log(answer())
+console.log(answer(100, 1000));
 
     /* Answer is 906609 */
 ```
@@ -256,12 +249,12 @@ print(answer())
 <h6>Javascript Solution</h6>
 
 ```javascript
-function answer() {
+function answer(min, max) {
     let num = 1;
-  
-    for (let n = 1; n < 20; n++) {
+    
+    for (let n = min; n < max; n++) {
         if (num % n !== 0) {
-            for (let x = 1; x < 20; x++){
+            for (let x = min; x < max; x++){
                 if ((x * num) % n === 0) {
                     num = num * x
                     break
@@ -272,8 +265,7 @@ function answer() {
     return num;
 }
 
-
-console.log(answer());
+console.log(answer(1 , 20));
 
     /* Answer is 232792560 */
 ```
@@ -395,12 +387,13 @@ function prime(x) {
     return true;
 }
 
+const stNumber = 10001;
 
-function answer() {
+function answer(stNumber) {
     let primes = [];
     let num = 2;
 
-    while (primes.length < 10001) {
+    while (primes.length < stNumber) {
         if (prime(num)) {
             primes.push(num);
         }
@@ -409,8 +402,7 @@ function answer() {
     return primes.slice(-1).pop()
 }
 
-
-console.log(answer());
+console.log(answer(stNumber));
 
     /* Answer is 104743 */
 ```
@@ -477,10 +469,10 @@ print(answer())
 <h6>Javascript Solution</h6>
 
 ```javascript
-function answer() {
-    for (let a = 1; a <= 1000; a++) {
-        for (let b = a + 1; b <= 1000; b++) {
-            c = 1000 - a - b;
+function answer(sumABC) {
+    for (let a = 1; a <= sumABC; a++) {
+        for (let b = a + 1; b <= sumABC; b++) {
+            c = sumABC - a - b;
             if (a*a + b*b === c*c) {
                 return (a*b*c);
             }
@@ -488,8 +480,7 @@ function answer() {
     }
 }
 
-
-console.log(answer());
+console.log(answer(1000));
 
     /* Answer is 31875000 */
 ```
@@ -538,11 +529,9 @@ function prime(x) {
     return true;
 }
 
-
-function answer() {
+function answer(maxNum) {
     let sum = 0;
-
-    for (let n = 2; n < 2000000; n++ ) {
+    for (let n = 2; n < maxNum; n++ ) {
         if (prime(n)) {
             sum += n
         }
@@ -550,8 +539,7 @@ function answer() {
     return sum;
 }
 
-
-console.log(answer());
+console.log(answer(2000000));
 
     /* Answer is 142913828922 */
 ```

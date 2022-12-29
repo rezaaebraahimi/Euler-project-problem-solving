@@ -6,11 +6,10 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 */
 
+const range = [...Array(1000).keys()];
 
-function answer() {
+function answer(range) {
     let sum = Number("0");
-    const range = [...Array(1000).keys()];
-    
     for (let n in range) {
         if (n % 3 === 0 || n % 5 === 0)
             sum = sum + Number(n);
@@ -18,7 +17,6 @@ function answer() {
     return sum
 }
 
-
-console.log(answer());
+console.log(answer(range));
 
     /* Answer is 233168 */

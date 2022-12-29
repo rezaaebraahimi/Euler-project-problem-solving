@@ -13,17 +13,14 @@ Find the difference between the sum of the squares of /
 the first one hundred natural numbers and the square of the sum.
 */
 
-
 function sumOfSq() {
     let sum = 0;
-
     for (let n = 1; n < 101; n++) {
         let sumSq = n ** 2;
         sum += sumSq;
     }
     return sum;
 }
-
 
 function sqOfSum() {
     let sum2 = 0;
@@ -34,7 +31,6 @@ function sqOfSum() {
     }
     return sq;
 }
-
 
 console.log(sqOfSum() - sumOfSq());
 

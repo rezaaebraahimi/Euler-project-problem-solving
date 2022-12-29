@@ -8,10 +8,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 find the sum of the even-valued terms.
 */
 
-
-function answer() {
-    let firstNum = 1, secondNum = 1, newFib = firstNum + secondNum, sum = 0;
-
+function answer(firstNum, secondNum, newFib, sum) {
     while (newFib < 4000000) {
         sum += newFib;
         firstNum = secondNum + newFib;
@@ -21,7 +18,6 @@ function answer() {
     return sum;
 }
 
-
-console.log(answer());
+console.log(answer(1,1,2, 0));
 
     /* Answer is 4613732 */
