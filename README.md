@@ -1,4 +1,4 @@
-# Problem Solving (Euler Project)
+# Problem Solving (Project Euler)
 
 - In this repository, I tried to solve 10 computational problems of **Project euler** using **Python and Javascript**.
 
